@@ -13,14 +13,14 @@ function ObjectsInState(){
         setCar({...car, make: event.target.value})
     }
     function handleModelChange(event){
-        setCar({})
+        setCar({...car,model: event.target.value})
     }
     return (
         <div> 
-            <p>Your favourite car is: {car.make} {car.year} {car.model} </p>
             <input type="number" value={car.year} onChange={handleYearChange}/>
             <input type="text" value={car.make} onChange={handleMakeChange}/>
             <input type="text" value={car.model} onChange={handleModelChange}/>
+            <p>Your favourite car is: {car.make} {car.year} {car.model} </p>
         </div>
     );
 }
